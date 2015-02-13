@@ -1,0 +1,157 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+html, body {
+	height: 100%;
+	font-family: 'Helvetica', sans-serif;
+}
+
+.m10 {
+	padding: 10px;
+}
+.url-clearfix {
+	clear: both;
+	overflow: hidden;
+}
+
+header {
+	.navbar-inner {
+		@include background-image(linear-gradient(left top, white, #E7F2DD)); 
+	}
+}
+
+.loading {
+	background: url('../img/ajax-loader.gif') no-repeat center center;
+	min-height: 50px;
+	clear: both;
+	overflow: hidden;
+
+	.thumbnail {
+		margin-top: -1000px;
+		@include transition-property(all);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease-in);
+	}
+}
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+
+	.search {
+		.input-prepend {
+			vertical-align: normal;
+			margin: 5px;
+		}
+	}
+
+	.thumbnail {
+		@include background-image(linear-gradient(left top, white, #E7F2DD)); 
+		text-align: left;
+		border: none;
+		border-bottom: 1px solid #97CB6F;
+		margin-bottom: 2px;
+		height: 100px;
+
+		a {
+			color: #2C3F52;;
+			@include single-text-shadow;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		p, .title {
+			padding-bottom: 10px;
+		}
+		.title {
+			font-size: 1em;
+			text-transform: uppercase;
+			font-size: 1em;
+			font-weight: bold;
+		}
+		.polaroid-wrapper {
+			margin: 5px 20px 5px;
+			height: 90%;
+			text-align: center;
+			border-right: 1px solid #97CB6F;
+			img {
+				height: 90%;
+				@include transition-property(all);
+				@include transition-duration(0.2s);
+				@include transition-timing-function(ease-in);
+			}
+		}
+		.publishedOn {
+			padding-bottom: 10px;
+		}
+		.actionbar {
+			a {
+				padding-right: 10px;
+				font-size: 0.9em;
+			}
+		}
+
+		&.details {
+			height: auto;
+			.preview {
+				max-height: 150px;
+				margin-left: 0;
+			}
+			.polaroid-wrapper {
+				margin: 0 !important;
+				border-right: none !important;
+				img {
+					height: auto !important;
+				}
+			}
+			.tags {
+				margin-top: 10px;
+			}
+		}
+
+		&.item:hover {
+			@include background-image(linear-gradient(left top, white, #00A99D)); 
+			@include transition-property(all);
+			@include transition-duration(0.5s);
+			border-bottom: 1px solid #00A99D;
+			
+			a {
+				color: #FFF;
+			}
+			.polaroid-wrapper {
+				border-right: 1px solid #00A99D;
+				height: 100%;
+				margin: 0 20px 5px;
+				@include transition-property(all);
+				@include transition-duration(0.1s);
+				@include transition-timing-function(ease-in);
+				img {
+					margin-left: 30px;
+					@include transition-property(all);
+					@include transition-duration(0.2s);
+					@include transition-timing-function(ease-in);
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: 20px 0;
+	margin-top: 20px !important;
+	@include background-image(linear-gradient(left top, white, #E7F2DD)); 
+	text-transform: uppercase;
+	font-size: 0.8em;
+	@include box-shadow(rgba(0,0,0,0.065) 0 1px 4px);
+	@include border-radius(4px);
+	border: 1px solid #d4d4d4;
+	.copy {
+		margin-right: 10px;
+		small {
+			font-size: 0.7em;
+		}
+	}
+}

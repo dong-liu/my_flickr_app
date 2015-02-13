@@ -1,0 +1,78 @@
+@import "compass/css3";
+
+/**
+ * RESPONSEIVE DESGIN - Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+
+/* Spec request ----------- */
+@media only screen and (max-width : 800px) {
+	.wrapper {
+		width: 90%;
+	}
+	
+	.title {
+		padding-bottom: 0 !important;
+	}
+
+	.published {
+		display: block !important;
+		font-size: 0.7em;
+	}
+	.actionbar {
+		.published {
+			display: none !important;
+		}
+	}
+
+	.wrapper {
+		width: 90%;
+	}
+
+	.navbar-inner {
+		padding-left: 10px !important;
+		padding-right: 0 !important;
+	}
+
+	.thumbnail.details {
+		.preview {
+			display: none !important;
+		}
+		.description, .tags {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width : 320px) and (max-width : 550px) {
+
+	.wrapper {
+		width: 96%;
+	}
+
+	.navbar-inner {
+		padding-left: 10px !important;
+		padding-right: 0 !important;
+	}
+
+	.thumbnail {
+		.polaroid-wrapper {
+			width: 25%;
+			text-align: left !important;
+			margin-left: 0 !important;
+			border-right: none !important;
+			img {
+				height: 50px !important;
+			}
+		}
+		&.item:hover {
+			.polaroid-wrapper {
+				img {
+					margin-left: 0 !important;
+				}
+			}
+		}
+	}
+
+}

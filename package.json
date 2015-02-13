@@ -1,0 +1,35 @@
+{
+  "name": "flickr_testing",
+  "version": "0.0.1",
+  "private": true,
+  "repository": "",
+  "keywords": [],
+  "author": "Dong Liu",
+  "license": "BSD",
+  "scripts": {
+    "start": "./node_modules/nodemon/nodemon.js app.js ",
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-mocha": "~0.3.1",
+    "karma": "~0.12.23",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-jasmine": "~0.1.5",
+    "karma-junit-reporter": "~0.2.2",
+    "karma-mocha": "~0.1.9",
+    "karma-requirejs": "~0.2.2",
+    "mocha": "~1.21.4",
+    "nodemon": "~0.7.8",
+    "requirejs": "^2.1.15"
+  }
+}

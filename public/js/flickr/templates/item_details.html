@@ -1,0 +1,31 @@
+<h4 class="title m10">
+	<a href="{{link}}" title="{{title}}" target="_blank">
+		{{title_trunc}}
+	</a>
+	<a class="back btn btn-small pull-right" href="#">Back</a>
+</h4>
+
+<p class="m10">
+	<a href="http://www.flickr.com/people/{{author_id}}" target="_blank">Author: {{author_id}}</a> |
+	<small><b>Published on: </b>{{published_formatted}}</small>	
+</p>
+
+<div class="clearfix m10">
+	<div class="span3 preview">
+		<a href="{{link}}" title="{{title}}" target="_blank" class="pull-left polaroid-wrapper">
+			<img src="{{media.m}}" alt="" class="img-polaroid">
+		</a>	
+	</div>
+	
+	<div class="description span6 pull-right">
+		{{{description}}}
+	</div>
+	<div class="tags span6 pull-right">
+		<strong>Tags</strong>
+		{{#each tagsArray}}
+		  <a href="#flickr/search/{{.}}">
+		  	<span class="label label-warning">{{.}}</span>
+		  </a>
+		{{/each}}
+	</div>
+</div>

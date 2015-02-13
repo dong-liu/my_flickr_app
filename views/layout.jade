@@ -1,0 +1,36 @@
+doctype html
+html
+ head
+  title= title
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="description", content="Flickr Public Feed test project")
+  meta(name="author", content="Dong Liu")
+
+  //- DEVELOPMENT
+  link(rel='stylesheet', href='js/libs/bootstrap.css/css/bootstrap.min.css')
+  link(rel='stylesheet', href='css/main.css')
+  link(rel='stylesheet', href='css/main.responsive.css')
+  //- PRODUCTION
+  //link(rel='stylesheet', href='js/dist/css/main.css')
+
+ body
+
+  //- HEADER
+  header.wrapper.clearfix
+    block header
+
+  .wrapper.clearfix
+   //- BODY
+   block content
+
+ //- FOOTER
+ footer.wrapper.clearfix
+  .pull-right
+    p.copy
+      small Developed by Dong Liu
+
+ //- JAVASCRIPT
+ //- DEVELOPMENT
+ script(type="text/javascript", src="js/libs/requirejs/require.js", data-main="js/main")
+ //- PRODUCTION
+ //script(type="text/javascript", src="js/libs/requirejs/require.js", data-main="js/dist/js/main")
